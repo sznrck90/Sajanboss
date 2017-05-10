@@ -28,6 +28,8 @@
 	echo "<br />";
 
 	$string = 123.45;
+	
+	
 	echo $string;
 	echo "<br />";
 
@@ -36,8 +38,9 @@
 
 	$array = array( 1, 2, 3, 4, 5, 6);
 	echo $array[4];
-
-
+	
+	/*Saroj Shrestha */
+	echo "just testing ";
 $string_1 = "Lorem \"ipsum dolor sit amet, consectetur adipisicing elit\". Nam porro maxime 'repudiandae reprehenderit' autem mollitia adipisci assumenda, sapiente similique. Amet quam dicta rerum earum ad. Voluptatibus praesentium voluptas vitae at!";
 
 $string_2 ='Lorem \'ipsum dolor sit amet\', consectetur adipisicing elit. Fugit facere nesciunt ducimus culpa repellat et sunt! Quas aliquam, maxime repudiandae doloribus reprehenderit? Culpa explicabo nemo possimus, pariatur. Dolores, nobis, fugiat.';
