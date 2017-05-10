@@ -12,7 +12,7 @@
 	define('G',9.8);
 	echo PI; 
 	echo "<br/>";
-	echo G;
+	echo G ;
 
 ?>
 
