@@ -1,6 +1,7 @@
 <?php
 	/*Data types in PHP*/
-	/*echo "String Data types";
+
+	echo "String Data types";
 	echo "<hr />"; // horizontal line
 
 	$string = "This is string variable";
@@ -34,7 +35,7 @@
 	echo "<hr />";
 
 	$array = array( 1, 2, 3, 4, 5, 6);
-	echo $array[4];*/
+	echo $array[4];
 
 
 $string_1 = "Lorem \"ipsum dolor sit amet, consectetur adipisicing elit\". Nam porro maxime 'repudiandae reprehenderit' autem mollitia adipisci assumenda, sapiente similique. Amet quam dicta rerum earum ad. Voluptatibus praesentium voluptas vitae at!";
