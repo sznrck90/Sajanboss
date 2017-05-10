@@ -27,6 +27,8 @@
 	echo "<br />";
 
 	$string = 123.45;
+	
+	
 	echo $string;
 	echo "<br />";
 
