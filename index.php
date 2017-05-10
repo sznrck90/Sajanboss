@@ -1,7 +1,7 @@
 <?php
 
-	echo "hello word"; //single line comment
-	/* multi line comment */
+	echo "hello word" ; //single line comment
+	/* multi line comment */ 
 
 ?>
 
