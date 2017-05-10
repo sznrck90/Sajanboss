@@ -7,6 +7,7 @@
 	echo '$string'; //$string
 	echo "<br/>";
 
+	
 	/*Special Characters*/
 	// __FILES__ - Current file find out, __DIR__ - current directory find out, @ - Error Supression, ! - Negation, $ - Variable declaration, && - Logical AND,  || - Logical OR, class, this
 
