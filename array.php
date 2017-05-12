@@ -1,5 +1,13 @@
 <?php
 	/*Array And Its functions*/
+	$array = array(	array(),
+					array("this","is","array", "element."));;
+
+	$string = implode(" ",$array[1]);
+	$str = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nesciunt repellendus numquam quidem, nam blanditiis perspiciatis pariatur labore dolores commodi ratione delectus praesentium maiores voluptatibus nobis soluta atque. Quam, enim.";
+	$list = explode(" ",$str);
+
+
 	$student_array = array("John Doe",5,"BBA","johndoe@gmail.com","Kathmandu, Nepal");
 
 
@@ -38,6 +46,15 @@
 								"hareram@outlook.com",
 								"Nuwakot, Nepal")
 						);
+
+	$json_obj = json_encode($all_student_array);
+	echo $json_obj;
+	echo "<br />";
+	echo "<br />";
+	echo "<br />";
+	$serialize = serialize($all_student_array);
+	echo $serialize;
+	exit;
 
 	echo "Name: ".$all_student_array[0]['name'];
 	echo "<br/>Roll No. :".$all_student_array[0]['roll_no'];	
