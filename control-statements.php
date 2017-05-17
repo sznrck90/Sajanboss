@@ -82,27 +82,30 @@ echo "<hr/>";
 echo "Foreach Loop";
 echo "<hr/>";
 $all_student_array = array(
-						array(
-							"name" => "John Doe",
+						"student_1" => array(
+							"name" => array(
+								"first_name" => "john",
+								"middle_name" => '',
+								"last_name" => "doe"),
 							"roll_no" => 5,
 							"class" => "BBA",
 							"email" => "johndoe@gmail.com",
 							"address" => "Kathmandu, Nepal"
 						),
-						array(
+						"student_2" => array(
 							"name" => "Ram Krishna",
 							"roll_no" => 12,
 							"class" => "BBS",
 							"email" => "ram@gmail.com",
 							"address" => "Lalitpur, Nepal"
 						),
-						array(
+						"student_3" => array(
 							"Sitaram Kattel",
 							23,
 							"BIM",
 							"sitaram@yahoo.com",
 							"Bhaktapur, Nepal"),
-						array(
+						"student_4" => array(
 							"Hareram",
 							43,
 							"BBS",
@@ -112,13 +115,23 @@ $all_student_array = array(
 	
 	$array = array(1,2,3,4,5,6,7,8,9,10);
 
-	foreach($array as $key => $value){
+	foreach($all_student_array as $key => $info){
 		//echo $key."&nbsp;";
-		echo $value['name'];
+		/*echo $value['name'];
 		echo "<pre>";
 		print_r($value);
 		echo "</pre>";
-		echo "<hr/>";
+		echo "<hr/>";*/
+		if(is_array($info)){
+			foreach ($info as $key_1 => $value_1) {
+				if(is_array($value_1)){
+					$value_1['first_name'];
+				}
+
+			}
+		} else {}
+
+
 	}
 		
 ?>
