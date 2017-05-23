@@ -4,9 +4,49 @@
  * @Organization: Knockout System Pvt. Ltd.
  */
 if(isset($_POST['button_submit']) && $_POST['button_submit'] != ""){
-	echo "<pre>";
-	print_r($_POST);
-	echo "</pre>";
+	
+	$allowed_extensions = array("jpg","jpeg","png","gif","txt");
+
+	if(!is_dir("uploads/images")){
+		mkdir("uploads/images");
+	}
+
+	if(is_dir("uploads")){
+		rmdir("uploads");
+	}
+
+	//unlink("uploads/file-2410.jpg");
+
+	for($i=0; $i< count($_FILES['picture']['tmp_name']); $i++){
+		/*echo "<pre>";
+		print_r($_FILES['picture']['name'][$i]);
+		echo "<br/>";
+		print_r($_FILES['picture']['tmp_name'][$i]);
+		echo "<br/>";
+		print_r($_FILES['picture']['error'][$i]);
+		echo "<br/>";
+		print_r($_FILES['picture']['type'][$i]);
+		echo "<br/>";
+		print_r($_FILES['picture']['size'][$i]);
+		echo "</pre>";
+*/
+
+		$ext = pathinfo($_FILES['picture']['name'][$i],PATHINFO_EXTENSION);
+		$fileName = "file-".rand(0,999999).".".$ext;
+		
+		if(in_array($ext, $allowed_extensions) && $_FILES['picture']['size'][$i] <= 102400){
+			move_uploaded_file($_FILES['picture']['tmp_name'][$i],"uploads/".$fileName);
+		}
+
+	}
+	
+	/*$ext = pathinfo($_FILES['picture']['name'],PATHINFO_EXTENSION);
+	$fileName = "file-".rand(0,999999).".".$ext;
+	
+	if(in_array($ext, $allowed_extensions) && $_FILES['picture']['size'] <= 102400){
+		move_uploaded_file($_FILES['picture']['tmp_name'],"uploads/".$fileName);
+	}*/
+
 	exit;
 }
 ?>
@@ -49,12 +89,15 @@ if(isset($_POST['button_submit']) && $_POST['button_submit'] != ""){
 							<textarea name="description" class="form-control" style='resize: none;' rows="5"></textarea>
 					</div>
 					<div class="form-group">
+						<label>Picture:</label>
+						<input type="file" name="picture[]" multiple accept="image/*" />
+					</div>
+					<div class="form-group">
 							<button class="btn btn-primary" name="submit" >Sumbit</button>
 							<input type="submit" name="button_submit" class="btn btn-success" value="Submit" />
 							<input type="reset" class="btn btn-danger" value="Reset" />
 							<input type="submit" name="button_submit_1" class="btn btn-default" value="Submit" />
 							<input type="reset" class="btn btn-warning" value="Reset" />
-
 					</div>
 				</form>
 			</div>
