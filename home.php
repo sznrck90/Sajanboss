@@ -23,3 +23,6 @@
 	</div>
 </body>
 </html>
+<?php 
+	$string_test = "This is test String";
+?>

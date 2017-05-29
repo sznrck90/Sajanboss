@@ -73,8 +73,30 @@
 	$sub_string =  substr($string, -15, 10);
 	echo $sub_string;
 
-	md5();
+	/*md5();
 	sha1();
 	base64_encode();
 
+	in_array();
+	count();
+
+	ceil();
+	floor();
+	rand();
+*/
+	$string_test = "Lorem";
+
+echo $string_test;
+		include 'home.php';
+		//require 'home.php';
+
+	
+	echo $string_test;
+
+	function testVariable(){
+		global $string_test;
+		echo $string_test;
+	}
+
+	testVariable();
 ?>
