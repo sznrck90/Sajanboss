@@ -34,15 +34,6 @@
 	echo $x;		//45
 */
 
-	function debugger($variable, $isDie=false){
-		echo "<pre>";
-		print_r($variable);
-		echo "</pre>";
-		if($isDie){
-			exit;
-		}
-	}
-
 
 	/*Date and time*/
 	$date = date('Y-m-d h:i:s A');	//2017-05-23 3:35 PM
