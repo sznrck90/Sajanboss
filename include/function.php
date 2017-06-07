@@ -55,4 +55,15 @@ function getAllCategory($isDie=false){
 		}
 	}
 }
+
+function deleteData($table, $field, $value){
+	global $conn;
+	$sql = "DELETE FROM ".$table." WHERE ".$field." = ".$value;
+	$query = mysqli_query($conn, $sql);
+	if($query){
+		return true;
+	} else {
+		return false;
+	}
+}
 ?>

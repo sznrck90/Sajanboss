@@ -3,6 +3,8 @@
  * @Date:   2017-05-29 15:51:03
  * @Organization: Knockout System Pvt. Ltd.
  */
+include '../dbconnect.php';
+include '../include/function.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,7 +8,8 @@
 <?php include 'include/notification.php'; ?>
     
 	<div id="content">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam provident laboriosam tenetur ratione, corrupti pariatur iure quibusdam consequuntur. Quidem libero, laborum quia laboriosam itaque expedita dignissimos quis aperiam vero est?
+        <h4>Dashboard</h4>
+		
 	</div>
             </div>
             <!-- /.container-fluid -->

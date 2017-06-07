@@ -30,7 +30,12 @@
                     <li class="active">
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-                    
+                    <li class="active">
+                        <a href="list-category.php"><i class="fa fa-fw fa-list"></i> List Category</a>
+                    </li>
+                    <li class="active">
+                        <a href="add-category.php"><i class="fa fa-fw fa-plus"></i> Add Category</a>
+                    </li>
                     
                 </ul>
             </div>
