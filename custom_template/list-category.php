@@ -16,6 +16,7 @@
 		<th>Added By</th>
 		<th>Status</th>
 		<th>Summry (Substring)</th>
+		<th>Action</th>
 	</thead>
 	<tbody>
 		<?php
@@ -30,6 +31,9 @@
 					<td><?php echo $cat_data['category_title'];?></td>
 					<td><?php echo ($cat_data['status'] == 1) ? 'Active' : 'Inactive';?></td>
 					<td><?php echo substr($cat_data['summary'],0,100)."...";?></td>
+					<td>
+						<a href="list-category.php?id=<?php echo $cat_data['id'];?>&amp;act=<?php echo md5('del-'.$cat_data['id']);?>"> Delete</a>
+					</td>
 
 				</tr>
 				<?php
