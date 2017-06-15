@@ -1,6 +1,0 @@
-Options -Indexes
-Options +MultiViews
-DefaultType application/x-httpd-php
-#
-ErrorDocument 403 /403
-ErrorDocument 404 /404
