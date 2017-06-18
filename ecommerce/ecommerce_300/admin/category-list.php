@@ -36,10 +36,24 @@
                                             <td><?php echo $i;?></td>
                                             <td><?php echo $info['title'];?></td>
                                             <td><?php echo substr($info['summary'],0,100);?></td>
-                                            <td><?php echo getStatus($info['status']);?></td>
                                             <td>
-                                                <a href="#" class="btn btn-success" style="border-radius: 50%"><i class="fa fa-w fa-pencil"></i></a>
-                                                <a href="" style="border-radius: 50%" onclick="return confirm('Are you sure you want to delete this category?');" class="btn btn-danger"><i class="fa fa-w fa-trash"></i></a>
+                                                <p style="color: <?php echo ($info['status'] == 1) ? '#00FF00' : '#FF0000';?>">
+                                                <?php 
+                                                    echo getStatus($info['status']);
+                                                ?>
+                                                </p>
+                                            </td>
+                                            <td>
+
+                                             <?php
+                                                $url = "category-add.php?id=".$info['id']."&act=".substr(md5('edit-'.$info['id']),7,17);
+                                                ?>
+                                                <a href="<?php echo $url;?>" class="btn btn-success" style="border-radius: 50%"><i class="fa fa-w fa-pencil"></i></a>
+
+                                                <?php
+                                                    $url = "category-process.php?id=".$info['id']."&act=".substr(md5('del-'.$info['id']),7,17);
+                                                ?>
+                                                <a href="<?php echo $url;?>" style="border-radius: 50%" onclick="return confirm('Are you sure you want to delete this category?');" class="btn btn-danger"><i class="fa fa-w fa-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php

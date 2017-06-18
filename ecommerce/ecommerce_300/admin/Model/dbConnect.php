@@ -14,5 +14,16 @@
 		public function sanitize($string){
 			return $this->conn->real_escape_string($string);
 		}
+
+		protected function deleteData($table, $field, $value){
+			$stmt = $this->conn->prepare('DELETE FROM '.$table.' WHERE '.$field.' = ?');
+			if(is_int($value)){
+				$stmt->bind_param('i',$value);
+			} else {
+				$stmt->bind_param('s',$value);
+			}
+			$result = $stmt->execute();
+			return $result;
+		}
 	}
 ?>
