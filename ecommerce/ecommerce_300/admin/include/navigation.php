@@ -39,6 +39,12 @@
             <li>
                 <a href="category-list.php"><i class="fa fa-fw fa-list"></i> Category List</a>
             </li>
+            <li>
+                <a href="product-add.php"><i class="fa fa-fw fa-plus"></i> Product Add</a>
+            </li>
+            <li>
+                <a href="product-list.php"><i class="fa fa-fw fa-list"></i> Product List</a>
+            </li>
 
         </ul>
     </div>
